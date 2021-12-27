@@ -1,7 +1,12 @@
-const SearchList = () => {
+import SearchItem from './SearchItem';
+
+const SearchList = (props: { searchData: [] }) => {
+  const { searchData } = props;
   return (
     <div className="card-list">
-      <h1>asdasd</h1>
+      {searchData.map((item: any, idx: number): JSX.Element => {
+        return <SearchItem key={idx} item={item} />;
+      })}
     </div>
   );
 };

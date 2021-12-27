@@ -1,23 +1,14 @@
 import { useState } from 'react';
 
-const fetchApi = () => {
-  fetch('api/data')
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-};
-
-const SearchForm = (props: { getData: any }) => {
-  const { getData } = props;
+const SearchForm = (props: { getData: any; isOnLoading: boolean }) => {
+  const { getData, isOnLoading } = props;
   const [keyword, setKeyword] = useState('');
   return (
     <div className="form">
       <input
         type="text"
         className="form-text"
+        disabled={isOnLoading}
         onChange={(e: any) => {
           setKeyword(e.target.value);
         }}
@@ -32,6 +23,7 @@ const SearchForm = (props: { getData: any }) => {
       <button
         type="button"
         className="form-btn"
+        disabled={isOnLoading}
         onClick={() => {
           if (keyword) {
             getData(keyword);
