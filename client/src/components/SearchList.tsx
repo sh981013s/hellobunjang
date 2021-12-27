@@ -1,7 +1,7 @@
 import SearchItem from './SearchItem';
 
-const SearchList = (props: { searchData: [] }) => {
-  const { searchData } = props;
+const SearchList = (props: { searchData: []; isOnLoading: boolean }) => {
+  const { searchData, isOnLoading } = props;
   return (
     <div className="card-list">
       {searchData.map((item: any, idx: number): JSX.Element => {
