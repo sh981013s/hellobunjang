@@ -14,7 +14,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x:hidden;
-    font-family: 'Black Han Sans', sans-serif;  }
+    font-family: 'Black Han Sans', sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyles;

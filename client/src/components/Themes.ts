@@ -1,6 +1,7 @@
 export const DarkTheme = {
-  body: '#737373',
-  text: '#000000',
+  body: '#303030',
+  accentBody: '#000000',
+  text: '#e5e5e5',
   bodyRgba: '252, 246, 244',
   textRgba: '0,0,0',
 };

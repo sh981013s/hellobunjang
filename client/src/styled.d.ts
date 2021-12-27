@@ -2,11 +2,10 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    basicWidth: string;
-
-    color: {
-      main: string;
-      sub: string;
-    };
+    body: string;
+    accentBody: string;
+    text: string;
+    bodyRgba: string;
+    textRgba: string;
   }
 }
