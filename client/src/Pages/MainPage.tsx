@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MainImg from '../assets/헬로번장.svg';
+import Typed from 'react-typed';
 
 export const Container = styled.div`
   width: 100%;
@@ -25,6 +26,19 @@ const MainDescription = styled.div`
   line-height: 1.4;
   font-size: calc(1rem + 1.2vh);
 
+  .typed-cursor {
+    opacity: 0;
+    display: none;
+  }
+
+  .typed::after {
+    position: relative;
+    top: -4px;
+    content: '|';
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+
   span:nth-of-type(1) {
     color: blue;
   }
@@ -44,6 +58,9 @@ const MainPage = () => {
         안되시고. <br /> 중고로 사려니 여러 플랫폼 옮겨다니며 찾기도 귀찮으시고.{' '}
         <br /> 중고 명품의 투탑! <span>헬로마켓</span> 과 <span>번개장터</span>
         에서 대신 최저가를 찾아드리겠습니다
+        <Typed strings={['asdasdasdasda']} typeSpeed={40} backSpeed={50} loop>
+          <h1 />
+        </Typed>
       </MainDescription>
     </Container>
   );
